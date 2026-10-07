@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Juan Camilo González Cabrera - mathematician working in computational algebraic geometry, numerical analysis, and Julia">
+  <meta name="description" content="Juan Camilo González Cabrera - mathematician working in computational algebraic geometry, numerical algebraic geometry, and Julia">
   <title>Juan Camilo González Cabrera</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,10 +28,10 @@
         </div>
         <img
           class="portrait"
-          src="files/portrait.svg"
+          src="files/portrait.jpg"
           width="160"
           height="160"
-          alt="Portrait placeholder for Juan Camilo González Cabrera"
+          alt="Portrait of Juan Camilo González Cabrera"
         >
       </div>
       <nav aria-label="Page sections">
@@ -65,19 +65,65 @@
             <a href="https://juancagc.github.io/HomotopyGetsReal.jl/">Documentation</a>
           </p>
           <p>
-            A Julia library for homotopy continuation with a focus on computing and certifying real solutions of polynomial systems. It aims to make real-solution tracking practical for researchers who need both numerical performance and a posteriori certificates.
+            A native Julia reimplementation of the Bertini_real decomposition pipeline: it decomposes real algebraic curves and surfaces into vertices, edges, and faces using <a href="https://www.juliahomotopycontinuation.org">HomotopyContinuation.jl</a>, with no witness-set stage and no C dependency. Includes generic projection and isosingular deflation. Registered in the Julia General registry (v0.2.1, MIT license).
           </p>
         </article>
+        <article class="software-item">
+          <h3>M2Bridge.jl</h3>
+          <p class="item-links">
+            <a href="https://github.com/JuanCaGC/M2Bridge.jl">Code</a>
+          </p>
+          <p>
+            Prototype of a persistent Julia interface to Macaulay2: keep one M2 subprocess alive and exchange code and results as native Julia values across many calls. Inspired by <code>m2r</code> (R) and <code>sage.interfaces.macaulay2</code> (Python).
+          </p>
+        </article>
+        <article class="software-item">
+          <h3>Combinatorial Burnside groups</h3>
+          <p class="item-links">
+            <a href="https://github.com/JuanCaGC/combinatorial-burnside-groups">Code</a>
+          </p>
+          <p>
+            Julia/OSCAR implementation of the combinatorial Burnside groups <em>BC<sub>n</sub>(G)</em> of Tschinkel–Yang–Zhang (<a href="https://arxiv.org/abs/2112.12801">arXiv:2112.12801</a>). Reproduces all 52 published values we could locate; 88/88 validation checks pass.
+          </p>
+        </article>
+        <article class="software-item">
+          <h3>LPPCheck.jl</h3>
+          <p class="item-links">
+            <a href="https://github.com/JuanCaGC/LPPCheck.jl">Code</a>
+          </p>
+          <p>
+            Computational stress test, in exact arithmetic with Oscar.jl, of the Eisenbud–Green–Harris and lex-plus-powers statements (Hilbert functions and graded Betti numbers). Computational evidence only, not a proof.
+          </p>
+        </article>
+        <article class="software-item">
+          <h3>Meshfree GFDM on algebraic varieties</h3>
+          <p class="item-links">
+            <a href="https://github.com/JuanCaGC/Meshfree-GFDM-Algebraic-Varieties">Code</a>
+          </p>
+          <p>
+            Meshfree generalized finite difference method for elliptic PDEs on curved and singular algebraic varieties, using local tangential parameterization and homotopy continuation to locate singularities and tangent cones.
+          </p>
+        </article>
+        <p class="note">
+          Earlier work: <a href="https://github.com/JuanCaGC/Resolviendo-ecuaciones-polinomiales">Resolviendo ecuaciones polinomiales</a> (Julia/Oscar code from my undergraduate thesis on solving polynomial systems). Forks of <a href="https://github.com/JuanCaGC/bertini_real">bertini_real</a> and <a href="https://github.com/JuanCaGC/HomotopyContinuationForBertiniReal.jl">HomotopyContinuation.jl</a> are also on my GitHub.
+        </p>
       </section>
 
       <section id="talks" aria-labelledby="talks-heading">
         <h2 id="talks-heading">Talks</h2>
         <ul>
           <li>
-            ALBATROSS 2026 (ALgeBrAic meThods foR pOlynomial System Solving), Sorbonne Université, Paris, September 2026. Talk on HomotopyGetsReal.jl.
-            <span class="note">[slides coming soon]</span>
+            <em>When Homotopy Gets Real: Numerical Decomposition of Real Algebraic Curves and Surfaces in Julia.</em>
+            ALBATROSS 2026 (ALgeBrAic meThods foR pOlynomial System Solving), Sorbonne Université, Paris, September 4, 2026.
+            <a href="files/albatross-2026-slides.pdf">Slides (PDF)</a>
           </li>
         </ul>
+        <figure class="video">
+          <video controls preload="metadata" muted loop playsinline>
+            <source src="files/taubin-slab-sweep.mp4" type="video/mp4">
+          </video>
+          <figcaption>Constructing the Taubin heart surface slab by slab with HomotopyGetsReal.jl (animation from the talk).</figcaption>
+        </figure>
       </section>
 
       <section id="research" aria-labelledby="research-heading">
@@ -104,7 +150,7 @@
     </main>
 
     <footer>
-      <p>Last updated July 2026</p>
+      <p>Last updated October 2026</p>
     </footer>
   </div>
 </body>
