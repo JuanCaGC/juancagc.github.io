@@ -1,6 +1,6 @@
 # Personal academic website
 
-Static site for [Juan Camilo González Cabrera](https://juancagc.github.io/). Plain HTML and one CSS file. No build step, no frameworks, no JavaScript.
+Static site for [Juan Camilo González Cabrera](https://juancagc.github.io/). Plain HTML and one CSS file. No build step and no frameworks. The only JavaScript is a few lines for the light/dark theme toggle.
 
 Live URL once deployed: **https://juancagc.github.io/**
 
