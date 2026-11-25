@@ -13,6 +13,19 @@
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --text: #e6e6e6;
+    --muted: #a3a3a3;
+    --border: #3a3a3a;
+    --link: #7db7ea;
+    --link-hover: #a9d0f5;
+    --bg: #17181a;
+    --soft: #212326;
+  }
+}
+
 *,
 *::before,
 *::after {
