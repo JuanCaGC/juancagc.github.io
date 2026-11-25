@@ -17,11 +17,15 @@
             M.S. in Mathematics, Courant Institute of Mathematical Sciences, NYU
           </p>
           <p class="links">
-            <a href="mailto:jcg9323@nyu.edu">Email</a>
+            <a href="mailto:juancamilogonzalezc.math@gmail.com">Email</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="mailto:jcg9323@nyu.edu">NYU email</a>
             <span class="sep" aria-hidden="true">·</span>
             <a href="https://github.com/JuanCaGC">GitHub</a>
             <span class="sep" aria-hidden="true">·</span>
             <a href="https://orcid.org/0009-0004-9403-0012">ORCID</a>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="https://www.linkedin.com/in/juan-camilo-gonzalez-cabrera-899292234/">LinkedIn</a>
             <span class="sep" aria-hidden="true">·</span>
             <a href="files/cv.pdf">CV</a>
           </p>
@@ -37,6 +41,8 @@
       <nav aria-label="Page sections">
         <a href="#about">About</a>
         <span class="sep" aria-hidden="true">·</span>
+        <a href="#interests">Interests</a>
+        <span class="sep" aria-hidden="true">·</span>
         <a href="#software">Software</a>
         <span class="sep" aria-hidden="true">·</span>
         <a href="#talks">Talks</a>
@@ -51,12 +57,22 @@
       <section id="about" aria-labelledby="about-heading">
         <h2 id="about-heading">About</h2>
         <p>
-          I am a master's student in mathematics at the Courant Institute (NYU), graduating May 2027. I work in computational algebraic geometry and numerical analysis, and I build mathematical software in Julia. Before NYU I completed a double degree in Mathematics and Systems &amp; Computing Engineering at Universidad de los Andes (Colombia), advised by Mauricio Velasco in mathematics and by Nicolas Cardozo in Systems and Computer Engineering.
+          I am a master's student in mathematics at the Courant Institute (NYU), graduating May 2027. My master's thesis, advised by Yuri Tschinkel, is a computational study of combinatorial Burnside groups and classes of finite group actions in equivariant birational geometry. I work in computational algebraic geometry and numerical analysis, and I build mathematical software in Julia. Before NYU I completed a double degree in Mathematics and Systems &amp; Computing Engineering at Universidad de los Andes (Colombia), advised by Mauricio Velasco in mathematics and by Nicolas Cardozo in Systems and Computer Engineering.
+        </p>
+      </section>
+
+      <section id="interests" aria-labelledby="interests-heading">
+        <h2 id="interests-heading">Research interests</h2>
+        <p>
+          Computational and numerical algebraic geometry; computer algebra; numerical analysis; equivariant and arithmetic geometry from a computational viewpoint; formal verification of algebraic and numerical computation.
         </p>
       </section>
 
       <section id="software" aria-labelledby="software-heading">
-        <h2 id="software-heading">Software</h2>
+        <h2 id="software-heading">Software and projects</h2>
+        <p>
+          Several of these packages were developed with AI coding assistants (Claude, Codex, Cursor) under my supervision; the READMEs of HomotopyGetsReal.jl and combinatorial-burnside-groups document this.
+        </p>
         <article class="software-item">
           <h3>HomotopyGetsReal.jl</h3>
           <p class="item-links">
@@ -65,7 +81,7 @@
             <a href="https://juancagc.github.io/HomotopyGetsReal.jl/">Documentation</a>
           </p>
           <p>
-            A native Julia reimplementation of the Bertini_real decomposition pipeline: it decomposes real algebraic curves and surfaces into vertices, edges, and faces using <a href="https://www.juliahomotopycontinuation.org">HomotopyContinuation.jl</a>, with no witness-set stage and no C dependency. Includes generic projection and isosingular deflation. Registered in the Julia General registry (v0.2.1, MIT license).
+            Julia package for the numerical decomposition of real algebraic curves and surfaces into cell complexes via homotopy continuation. Reimplements the Bertini_real critical-point pipeline on top of <a href="https://www.juliahomotopycontinuation.org">HomotopyContinuation.jl</a>, with an optional generic-projection mode and an isosingular deflation diagnostic. Registered in Julia's General registry, latest version v0.2.2, MIT license, Documenter site, 538-test suite. A software paper is in preparation (not submitted).
           </p>
         </article>
         <article class="software-item">
@@ -74,16 +90,16 @@
             <a href="https://github.com/JuanCaGC/M2Bridge.jl">Code</a>
           </p>
           <p>
-            Prototype of a persistent Julia interface to Macaulay2: keep one M2 subprocess alive and exchange code and results as native Julia values across many calls. Inspired by <code>m2r</code> (R) and <code>sage.interfaces.macaulay2</code> (Python).
+            Prototype persistent Julia interface to Macaulay2 (one long-lived M2 process, exchanging code and results with a Julia session). Version 0.1.0, not registered.
           </p>
         </article>
         <article class="software-item">
-          <h3>Combinatorial Burnside groups</h3>
+          <h3>combinatorial-burnside-groups</h3>
           <p class="item-links">
             <a href="https://github.com/JuanCaGC/combinatorial-burnside-groups">Code</a>
           </p>
           <p>
-            Julia/OSCAR implementation of the combinatorial Burnside groups <em>BC<sub>n</sub>(G)</em> of Tschinkel–Yang–Zhang (<a href="https://arxiv.org/abs/2112.12801">arXiv:2112.12801</a>). Reproduces all 52 published values we could locate; 88/88 validation checks pass.
+            Julia/OSCAR implementation of the combinatorial Burnside groups BC_n(G) of Tschinkel, Yang and Zhang (<a href="https://arxiv.org/abs/2112.12801">arXiv:2112.12801</a>). Reproduces the 52 published values located in the paper and passes 88 validation checks (52 against the paper, 36 internal cross-checks), with Smith normal form certificates.
           </p>
         </article>
         <article class="software-item">
@@ -92,16 +108,22 @@
             <a href="https://github.com/JuanCaGC/LPPCheck.jl">Code</a>
           </p>
           <p>
-            Computational stress test, in exact arithmetic with Oscar.jl, of the Eisenbud–Green–Harris and lex-plus-powers statements (Hilbert functions and graded Betti numbers). Computational evidence only, not a proof.
+            Computational stress test, with Oscar.jl in exact arithmetic over Q, of the Eisenbud-Green-Harris and lex-plus-powers statements. About 2,100 checked instances with no violations; computational evidence only, not a proof.
           </p>
         </article>
         <article class="software-item">
-          <h3>Meshfree GFDM on algebraic varieties</h3>
+          <h3>Meshfree-GFDM-Algebraic-Varieties</h3>
           <p class="item-links">
             <a href="https://github.com/JuanCaGC/Meshfree-GFDM-Algebraic-Varieties">Code</a>
           </p>
           <p>
-            Meshfree generalized finite difference method for elliptic PDEs on curved and singular algebraic varieties, using local tangential parameterization and homotopy continuation to locate singularities and tangent cones.
+            Numerical Methods II course project. Generalized finite differences for elliptic PDEs on curved and singular algebraic varieties, using homotopy continuation to locate singularities.
+          </p>
+        </article>
+        <article class="software-item">
+          <h3>Lean 4 verification project</h3>
+          <p>
+            Course project (MATH-GA 2650): verification in Lean 4 of Smith normal form certificates produced by the combinatorial Burnside group computations. The repository is private.
           </p>
         </article>
         <p class="note">
@@ -113,7 +135,7 @@
         <h2 id="talks-heading">Talks</h2>
         <ul>
           <li>
-            <em>When Homotopy Gets Real: Numerical Decomposition of Real Algebraic Curves and Surfaces in Julia.</em>
+            When Homotopy Gets Real: Numerical Decomposition of Real Algebraic Curves and Surfaces in Julia.
             ALBATROSS 2026 (ALgeBrAic meThods foR pOlynomial System Solving), Sorbonne Université, Paris, September 4, 2026.
             <a href="files/albatross-2026-slides.pdf">Slides (PDF)</a>
           </li>
@@ -130,11 +152,13 @@
         <h2 id="research-heading">Research</h2>
         <ul>
           <li>
-            Software paper on HomotopyGetsReal.jl.
-            <span class="status">In preparation.</span>
+            Master's thesis, NYU Courant (2026-present), advisor Yuri Tschinkel: computational study of combinatorial Burnside groups and classes of finite group actions in equivariant birational geometry, in Julia and OSCAR.
           </li>
           <li>
-            Paper on dynamics of the Hastings-Powell system (joint work).
+            Undergraduate thesis, Universidad de los Andes (2023-2024), advisors Mauricio Velasco and Nicolás Cardozo: a numerical-algebraic solver in Julia for polynomial systems in any number of variables, combining Gröbner bases and the quotient-ring structure with a Newton-like method for simultaneous diagonalization. It also produced Homotopy gets real, the prototype of HomotopyGetsReal.jl.
+          </li>
+          <li>
+            Software paper on HomotopyGetsReal.jl.
             <span class="status">In preparation.</span>
           </li>
         </ul>
@@ -144,13 +168,24 @@
       <section id="teaching" aria-labelledby="teaching-heading">
         <h2 id="teaching-heading">Teaching</h2>
         <ul>
-          <li>Recitation Leader, Calculus I, NYU Courant (2025-present, two sections).</li>
+          <li>Recitation Leader, Calculus I, NYU Courant (2025-present, two sections, 60+ students).</li>
+          <li>Teaching Assistant, Universidad de los Andes (2022): Differential Calculus, Integral Calculus, and Differential Equations.</li>
+        </ul>
+      </section>
+
+      <section id="service" aria-labelledby="service-heading">
+        <h2 id="service-heading">Honors and service</h2>
+        <ul>
+          <li>COLFUTURO fellowship for graduate studies abroad (2025); NYU Graduate School Tuition Incentive Program matching award (2025).</li>
+          <li>Founding Member and Vice President, LeMMA, student association for Master's students in Mathematics and Mathematical Sciences, NYU Courant (2026-present).</li>
+          <li>Founding Member and Secretary, AMS Student Chapter, NYU Courant (2026-present).</li>
+          <li>Student Representative, Mathematics Department, Universidad de los Andes (2023).</li>
         </ul>
       </section>
     </main>
 
     <footer>
-      <p>Last updated October 2026</p>
+      <p>Last updated November 2026</p>
     </footer>
   </div>
 </body>
